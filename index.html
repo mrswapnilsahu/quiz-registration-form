@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>QuizRegistration</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <style>
+
+    .material-switch > input[type="checkbox"] {
+    display: none;   
+}
+
+.material-switch > label {
+    cursor: pointer;
+    height: 0px;
+    position: relative; 
+    width: 40px;  
+}
+
+.material-switch > label::before {
+    background: rgb(0, 0, 0);
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    content: '';
+    height: 16px;
+    margin-top: -8px;
+    position:absolute;
+    opacity: 0.3;
+    transition: all 0.4s ease-in-out;
+    width: 40px;
+}
+.material-switch > label::after {
+    background: rgb(255, 255, 255);
+    border-radius: 16px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    content: '';
+    height: 24px;
+    left: -4px;
+    margin-top: -8px;
+    position: absolute;
+    top: -4px;
+    transition: all 0.3s ease-in-out;
+    width: 24px;
+}
+.material-switch > input[type="checkbox"]:checked + label::before {
+    background: inherit;
+    opacity: 0.5;
+}
+.material-switch > input[type="checkbox"]:checked + label::after {
+    background: inherit;
+    left: 20px;
+}
+    body {
+        padding-top: 54px;
+    }
+    
+    @media (min-width: 992px) {
+        body {
+            padding-top: 56px;
+        }
+    }
+    /* Temporary navbar container fix */
+    
+    .navbar-toggler {
+        z-index: 1;
+    }
+    
+    @media (max-width: 576px) {
+        nav > .container {
+            width: 100%;
+        }
+    }
+
+    html, body {
+    background: url(./vendor/images/bg1.jpg) no-repeat center;
+    background-repeat: no-repeat;
+    background: url(./vendor/images/bg1.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.bg-inverse {
+      background-color: #e31e25 !important;
+}
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar fixed-top navbar-toggleable-md navbar-inverse bg-inverse">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarExample" aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img style="border-radius:10px" src="./vendor/images/logo.jpg" height="50px" width="150px"></a>
+            <div class="collapse navbar-collapse" id="navbarExample">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Register <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>                                        
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+        <div class="col-lg-2">
+        </div>
+            <div class="col-lg-8">
+                <!-- content starts here -->
+                <div class="col-lg-12" style="color: white !important;">
+                </div>
+                    <form action="/files/quiz/php/save.php" method="POST"> 
+
+                          <table class="table table-hover" style="margin-top: 8%;margin-bottom: 2%;background-color: rgba(254, 254, 254, 0.9);">
+                              <tr style="background-color: rgb(227, 30, 37) ! important; color: white;"><td style="border-top: none;"><b>Member 1:</b></td></tr>
+                              <tr>
+                              <td>
+                                  <div class="form-group">
+                                        <label for="name1">Name</label>
+                                        <input type="text" class="form-control" id="name1" name="name1" placeholder="Enter Name" required="true">
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="enroll1">Enrollment Number</label>
+                                        <input type="text" class="form-control" id="enroll1" name="enroll1" placeholder="Enrollment Number" required="true">
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="branch1">Select Branch</label>
+                                        <select class="form-control" id="branch1" name="branch1" required="true">
+                                          <option value="">Select Branch</option>
+                                          <option value="cs">Computer Science</option>
+                                          <option value="it">Information Technology</option>
+                                          <option value="ce">Civil Engineering</option>
+                                          <option value="ec">Electronics & Communication</option>
+                                          <option value="me">Mechenical Engineering</option>
+                                        </select>
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="mobile1">Mobile</label>
+                                        <input type="mobile1" class="form-control" id="mobile1" name="mobile1" placeholder="Enter Mobile" required="true">
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="email1">Email address</label>
+                                        <input type="email1" class="form-control" id="email1" name="email1" aria-describedby="emailHelp" placeholder="Enter email" required="true">
+                                        <small id="emailHelp" class="form-text text-muted">Use your official account.</small>
+                                      </div>
+                              </td>
+                              </tr>
+                              <tr style="background-color: rgb(227, 30, 37) ! important; color: white;"><td><b>Member 2:</b></td></tr>
+                              <tr>
+                                    <td>
+                                        <div class="form-group">
+                                        <label for="name2">Name</label>
+                                        <input type="text" class="form-control" id="name2" name="name2" placeholder="Enter Name" required="true">
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="enroll2">Enrollment Number</label>
+                                        <input type="text" class="form-control" id="enroll2" name="enroll2" placeholder="Enrollment Number" required="true">
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="branch2">Select Branch</label>
+                                        <select class="form-control" id="branch2" name="branch2" required>
+                                        <option value="">Select Branch</option>
+                                          <option value="cs">Computer Science</option>
+                                          <option value="it">Information Technology</option>
+                                          <option value="ce">Civil Engineering</option>
+                                          <option value="ec">Electronics & Communication</option>
+                                          <option value="me">Mechenical Engineering</option>
+                                        </select>
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="mobile2">Mobile</label>
+                                        <input type="mobile2" class="form-control" id="mobile2" name="mobile2" placeholder="Enter Mobile" required="true">
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="email2">Email address</label>
+                                        <input type="email2" class="form-control" id="email2" name="email2" aria-describedby="emailHelp" placeholder="Enter email" required="true">
+                                        <small id="emailHelp" class="form-text text-muted">Use your official account.</small>
+                                      </div>
+                                    </td>
+                              </tr>
+                              <tr>
+                             <!--  <td><div class="checkbox">
+                                        <label><input type="checkbox" required="true" value="">I Agree with the <a href="about.html">RULES & REGULATIONS</a></label>
+                                </div></td> -->
+                                <td>
+                                <div class="panel panel-default">
+                                    <!-- Default panel contents -->
+                                      <ul class="list-group">
+                                        <div class="col-lg-12">
+                                          <div class="input-group">
+                                                  
+                                            <div class="col-sm-10">
+                                              <div class="form-check">
+                                                <label class="form-check-label">
+                                                  <input class="form-check-input" type="checkbox" required="true">I agree with all the <a href="about.html">RULES & REGULATIONS</a></label>
+                                                
+                                                  <!-- <input type="" class="form-control"> -->
+                                              </div>
+                                          </div>
+                                      </ul>
+                </td>
+            
+                                </tr>
+                              <tr>
+                                <td><button type="submit" class="btn btn-danger btn-block">Submit</button></td>
+                              </tr>
+
+
+                          </table>                          
+                          
+                        </form>
+                <!-- content ends here -->
+            </div>
+            <div class="col-lg-2">
+        </div>
+
+
+        </div>
+
+        <footer style="color: white;text-shadow: 6px 1px 10px rgb(0, 0, 0);"> 
+        <center>          
+          <p><b>Developed By: CSE DEPT. 4th SEM</b></p>  
+        </center>        
+      </footer>
+    </div>
+
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/tether/tether.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
